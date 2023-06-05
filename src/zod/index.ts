@@ -2,7 +2,7 @@ import { z } from "zod"
 
 export const schemaForm = z.object({
     address: z.object({
-        zipCode: z.string().min(9, "Por favor informe um CEP válido"),
+        zipCode: z.string().min(9, "Por favor informe um CEP válido (00000-000)"),
         street: z.string().min(1, "Por favor ruma rua válida"),
         state: z.string().min(1, "Por favor informe um estado válido"),
         number: z.string().min(1, "Por favor informe um número válido"),
