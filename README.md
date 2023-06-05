@@ -8,7 +8,7 @@
 
 ## Descrição
 
-[Ver Projeto](https://form-with-zod.vercel.app/)
+[Ver Projeto](https://via-cep-with-zod.vercel.app/)
 
 #### Apenas um formulário de preenchimento automático utilizando zod para validar os campos e tratar erros junto com react-hook-form, utilizando a API do via CEP.
 
