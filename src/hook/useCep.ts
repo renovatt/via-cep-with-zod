@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import { useCallback, useEffect } from "react"
 import { zodResolver } from '@hookform/resolvers/zod'
 import { AddressProps, FormTypeProps } from "@/@types"
+import { handleCepApi } from "@/services"
 
 export const useCep = () => {
     const {
@@ -43,9 +44,8 @@ export const useCep = () => {
     }, [setValue])
 
     const handleFetchAdress = useCallback(async (zipCode: string) => {
-        const data = await fetch(`https://viacep.com.br/ws/${zipCode}/json/`)
-        const json = await data.json();
-        handleSetData(json)
+        const { response } = await handleCepApi(zipCode)
+        if (response) handleSetData(response!)
     }, [handleSetData])
 
     useEffect(() => {
