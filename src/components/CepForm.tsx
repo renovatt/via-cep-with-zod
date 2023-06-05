@@ -7,7 +7,7 @@ const CepForm = () => {
 
     return (
         <section className='m-auto'>
-            <h2>Cep</h2>
+            <h2 className='text-center mb-2'>Informe o seu CEP</h2>
             <form onSubmit={handleSubmit(handleFormSubmit)}
                 className="flex flex-col gap-4 w-full max-w-xs"
             >
